@@ -1,0 +1,4 @@
+<h2>Authentication</h2>
+
+<button class="btn btn-suc" *ngIf="!status" (click)="onSignIn()">Sign in</button>
+<button class="btn btn-danger" *ngIf="status" (click)="onSignOut()">Sign out</button>

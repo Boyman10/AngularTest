@@ -1,0 +1,10 @@
+<li [ngClass]="{'list-group-item': true, 'list-group-item-success': status === 'ON', 'list-group-item-danger': status === 'OFF'}">
+
+  <h4 [ngStyle]="{color: getColor()}">Inside device component : {{ name }}</h4>
+  <h3>Status : {{ getStatus() }}</h3>
+  <input type="text" class="form-control" [(ngModel)]="name" (change)="onChange()">
+
+  <a [routerLink]="[id]">Details</a>
+  <button class="btn btn-success" (click)="onSwithOn()" [disabled]="status === 'ON'">TURN ON</button>
+  <button class="btn btn-danger" (click)="onSwithOff()" [disabled]="status === 'OFF'">TURN OFF</button>
+</li>
